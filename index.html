@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>云玩家YunWanJia</title>
+      <script src="/src/style.js" type="module"></script>
+      <script src="./src/main.ts" type="module"></script>
+  </head>
+  <body class="flex flex-col">
+    <main class="flex flex-1 flex-col items-center pt-[6rem]">
+        <section>
+            <img alt="logo" class="w-[22rem]" id="logo" src="/img/logo.png"/>
+        </section>
+        <section class="flex" id="element-list">
+            <social-link icon="fa-Qq" text="QQ 群" link="https://qm.qq.com/cgi-bin/qm/qr?k=YrLqKUS9Io1FqzyTUlVML8Ixdqsv4gUZ&group_code=795159355"></social-link>
+            <social-link icon="fa-Steam" text="Steam 组" link="https://steamcommunity.com/groups/yunwanjia_"></social-link>
+            <social-link icon="fa-Teamspeak" text="Teamspeak" link="ts3server://ts.ywj.me"></social-link>
+            <social-link icon="fa-Github" text="Github" link="https://github.com/YunWanJia-dev/"></social-link>
+        </section>
+    </main>
+    <footer class="text-center text-[10px] text-[darkgrey]">
+        Powered by <a href="https://github.com/iCraftDreamers" target="_blank">iCraftDreamers</a>. Made with ❤
+    </footer>
+  </body>
+  <template id="social-link">
+      <link href="src/styles/social-link.css" rel="stylesheet">
+      <a target="_blank">
+          <button>
+              <svg></svg>
+              <span>${text}</span>
+          </button>
+      </a>
+  </template>
+</html>

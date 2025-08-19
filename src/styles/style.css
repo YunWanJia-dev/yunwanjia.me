@@ -1,0 +1,107 @@
+/**
+定义颜色变量
+ */
+* {
+    --color-alpha: rgb(47, 17, 93);
+    --color-beta: rgb(244, 144, 0);
+    --color-delta: rgb(252, 193, 138);
+}
+
+* {
+    color: oklch(from var(--color-alpha) 90% 0.03 h);
+    font-family: "微软雅黑 Light", serif;
+}
+
+/**
+定义背景
+ */
+body {
+    background-image: repeating-linear-gradient(135deg,
+    var(--color-alpha) 0%,
+    var(--color-beta) 40%,
+    var(--color-delta) 50%,
+    var(--color-beta) 60%,
+    var(--color-alpha) 100%
+    );
+    /* 指定背景图像的大小 */
+    background-size: 6400%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 240s linear infinite;
+}
+
+/**
+定义背景动画
+ */
+@keyframes bgAnimation {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 800%;
+    }
+}
+
+/**
+footer居底
+ */
+body {
+    min-height: calc(100vh - 16px);
+    /**
+    display: flex;
+    flex-direction: column;
+    */
+}
+
+/** 内容样式 */
+
+/**
+main {
+    padding-top: 6rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
+/*
+#logo {
+    width: 28rem;
+}
+*/
+
+/*
+#element-list {
+    display: flex;
+}
+*/
+
+/*定义横屏 css*/
+@media screen and (orientation: landscape) {
+    section {
+        flex-direction: row;
+    }
+
+    #element-list {
+        margin-top: 8rem;
+    }
+
+    #element-list > * {
+        margin: 0 1rem;
+    }
+}
+
+/*定义竖屏 css*/
+@media screen and (orientation: portrait) {
+    section {
+        flex-direction: column;
+    }
+
+    #element-list {
+        margin-top: 3rem;
+    }
+
+    #element-list > * {
+        margin: 0.5rem 0;
+    }
+}

@@ -1,0 +1,38 @@
+button, a{
+    all: unset;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(46, 51, 56, .05);
+    border-radius: 10px;
+    display: flex;
+    width: 120px;
+    height: 36px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    transition: background-color .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+button:hover {
+    background-color: rgba(46, 51, 56, .09);
+}
+
+button:active {
+    background-color: rgba(46, 51, 56, .13);
+}
+
+svg {
+    --icon-url: '';
+    width: 14px;
+    height: 14px;
+    background-color: currentColor;
+    mask: var(--icon-url) no-repeat center / contain;
+    display: inline-block;
+}
+
+span {
+    width: 80px;
+    text-align: center;
+}
