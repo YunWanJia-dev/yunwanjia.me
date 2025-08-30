@@ -64,11 +64,11 @@ main {
 }
 */
 
-/*
+
 #logo {
-    width: 28rem;
+    width: min(28rem, 80vw);
 }
-*/
+
 
 /*
 #element-list {
